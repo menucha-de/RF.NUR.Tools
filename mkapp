@@ -1,0 +1,18 @@
+#!/bin/bash
+
+set -e
+set -x
+
+env
+
+. /usr/share/mkapp/functions
+
+for arch in $ARCH; do
+  ant_build clean-all
+  set_env $ARCH
+  ant_build
+
+  if [ "$PUBLISH" ]; then
+    publish_ivy ivy
+  fi
+done

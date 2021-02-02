@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ivy-module version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
+
+	<info organisation="havis/device/rf/nur" module="tools" default="true" />
+
+	<configurations>
+		<conf name="default"/>
+		<conf name="standalone" extends="default" />
+	</configurations>
+
+	<dependencies>
+		<dependency org="com/nordicid" name="nurapi" rev="${nordicid.version}" conf="default->default,doc" />
+		<dependency org="com/nordicid" name="nativeserial" rev="${nordicid.version}" conf="default" />
+		<dependency org="com/nordicid" name="nativeserial-${platform}" rev="${nordicid.version}" conf="standalone->default" />
+	</dependencies>
+
+</ivy-module>

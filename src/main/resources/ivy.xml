@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ivy-module version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
+
+	<info organisation="havis/device/rf/nur" module="tools" default="true" />
+
+	<configurations>
+		<conf name="default" visibility="public" />
+		<conf name="doc" visibility="public" />
+		<conf name="src" visibility="public" />
+	</configurations>
+
+	<publications>
+		<artifact name="havis.device.rf.nur-tools" conf="default" />
+		<artifact name="havis.device.rf.nur-tools-javadoc" conf="doc" />
+		<artifact name="havis.device.rf.nur-tools-sources" conf="src" />
+	</publications>
+
+</ivy-module>

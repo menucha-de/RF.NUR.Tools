@@ -1,0 +1,22 @@
+name: Publish jar
+
+on:
+  workflow_dispatch:
+    inputs:
+      arch:
+        description: 'Architecture'
+        default: 'amd64 armhf'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v2
+      - name: Publish jar
+        id: build
+        uses: peramic/actions/build-stretch@v1
+        with:
+          arch: ${{ github.event.inputs.arch }}
+          script: ./mkapp
+          token: ${{ secrets.ACTIONS }}

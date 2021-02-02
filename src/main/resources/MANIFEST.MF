@@ -1,0 +1,4 @@
+Bundle-Version: 2.6.0
+Implementation-Version: 2.6
+Main-Class: havis.device.rf.nur.tools.Main
+Class-Path: NurApi.jar NativeSerialTransport.jar
